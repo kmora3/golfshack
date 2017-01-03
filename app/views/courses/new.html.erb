@@ -1,0 +1,56 @@
+<%= form_for @course do |c| %>
+  <%=c.label :name %>
+  <%=c.text_area :name %>
+  <%=c.label :description %>
+  <%=c.text_area :description %>
+  <%=c.label :address %>
+  <%=c.text_area :address %>
+  <%=c.label :city %>
+  <%=c.text_area :city %>
+  <%=c.label :state %>
+  <%=c.text_area :state %>
+  <%=c.label :zipcode %>
+  <%=c.text_area :zipcode %>
+  <%=c.label :phone %>
+  <%=c.text_area :phone %>
+  <%=c.label :hole_count %>
+  <%=c.text_area :hole_count %>
+  <%=c.submit %>
+<% end %>
+
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Write a Review</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Course Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputEmail" placeholder="Course Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Review</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea"></textarea>
+        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Rating</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
