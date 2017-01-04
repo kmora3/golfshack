@@ -8,4 +8,11 @@ class Course < ActiveRecord::Base
   validates_presence_of :zipcode
   validates_presence_of :phone
   validates_presence_of :hole_count
+
+  geocoded_by :full_address
+  after_validation :geocode
+
+  def full_address
+    [address, city, state, zipcode].join(',')
+  end
 end
