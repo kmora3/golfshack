@@ -3,7 +3,8 @@
   Avg Rating: <span class="star-rating" data-score=<%= @avg_rating%></span>(<%=@avg_rating%>)
   </div>
 <div class="jumbotron">
-  <%= image_tag @course.photo.url(:large) %>
+  <img src="<%=@course.photo.url%>">
+  <!-- <%= image_tag @course.photo.url(:large) %> -->
 </div>
 
 <div>
@@ -42,7 +43,7 @@ Hole Count: <%= @course.hole_count %><br>
           <h5><%= "#{review.user.email}" %></h5>
         </td>
         <td id="reviewtable">
-          <div class="clearfix star-rating" data-score=<%= review.rating %></div>
+          <div class="pull-right clearfix star-rating" data-score=<%= review.rating %></div>
           <%=review.comment %>
         </td>
         </tr>

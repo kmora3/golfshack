@@ -21,6 +21,18 @@ module Golfshack
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    # config.active_record.raise_in_transactional_callbacks = true
+    # config.paperclip_defaults = {
+    #    storage: :s3,
+    #    s3_protocol: 'http',
+    #    s3_region: 'us-east-1',
+    #    s3_credentials: {
+    #      s3_host_name: 's3.amazonaws.com',
+    #      bucket: 'kmo-golfshack',
+    #      access_key_id: 'AKIAIHAIOZT6CJP3OIFQ',
+    #      secret_access_key: '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',
+    #    }
+    #  }
+
   end
 end

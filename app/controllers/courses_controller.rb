@@ -1,5 +1,8 @@
    class CoursesController < ApplicationController
      before_action :authenticate_user!, only: [:create, :new]
+     require 'aws-sdk'
+     require 'aws-sdk-resources'
+
      def index
        @courses = Course.all
      end
@@ -22,12 +25,12 @@
        @reviewCount = Review.where(course_id: @course).count
        @course = Course.find(params[:id])
        @reviews = Review.where(course_id: @course)
-       if @reviews.blank?
-         @avg_rating = 0
-       else
-         @avg_rating =  @reviews.average(:rating).round(2)
-       end
-     end
+        if @reviews.blank?
+          @avg_rating = 0
+        else
+          @avg_rating =  @reviews.average(:rating).round(2)
+        end
+    end
 
     private
       def course_params

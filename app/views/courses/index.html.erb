@@ -3,7 +3,7 @@
 <div class="jumbotron">
   <img class="heroimage"src="http://www.golfsignco.com/images/panoramic-photos/panorama06.jpg">
 </div>
-<%=@courses.each do |c| %>
+<% @courses.each do |c| %>
 <div class="well">
   <%=link_to c.name, c %><br>
   <%= c.address %>

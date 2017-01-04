@@ -18,6 +18,9 @@ gem 'bootstrap_form'
 #image uploads
 gem 'paperclip'
 # Use Uglifier as compressor for JavaScript assets
+gem 'aws-sdk'
+gem 'dotenv-rails'
+
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
