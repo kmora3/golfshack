@@ -1,11 +1,3 @@
-stuff I'm using:
-
-Raty: star rating library
-Devise: user authentication
-Bootstrap
-Bootswatch
-Bootstrap_forms
-geocoder	
 # Golfshack
 
 ## **Description**
@@ -19,7 +11,7 @@ Golfshack is a site that allow golf enthusiasts to share their reviews on golf c
 	* email (username)
 	* password (6 character requirement)
 	* First Name
-	* Last Name 
+	* Last Name
 * As a user, I need to be able to update my profile
 * As a user, I need to be able to delete my account
 * As a user, I need to be able to add courses to the site. Course attributes include:
@@ -41,18 +33,6 @@ Golfshack is a site that allow golf enthusiasts to share their reviews on golf c
 
 #####Logic Whiteboard
 ![Game Board](https://raw.githubusercontent.com/kmora3/war/master/img/whiteboard_logic.JPG)
-
-#####Game Board
-![Game Board](https://raw.githubusercontent.com/kmora3/war/master/img/Game_Board.png)
-
-#####Player 1 Wins Hand
-![Player1Wins](https://raw.githubusercontent.com/kmora3/war/master/img/Player_1_Wins.png)
-
-#####Player 2 Wins Hand
-![Player2Wins](https://raw.githubusercontent.com/kmora3/war/master/img/Player_2_Wins.png)
-
-#####Player 1 Wins GAme
-![Player1WinsGame](https://raw.githubusercontent.com/kmora3/war/master/img/Player1_Wins_Game.png)
 
 ## **Technologies/Tools Used**
 * Ruby
