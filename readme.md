@@ -31,8 +31,8 @@ Golfshack is a site that allow golf enthusiasts to share their reviews on golf c
 
 ## **Wireframes**
 
-#####Logic Whiteboard
-![Game Board](https://raw.githubusercontent.com/kmora3/war/master/img/whiteboard_logic.JPG)
+##### User Flow
+
 
 ## **Technologies/Tools Used**
 * Ruby
