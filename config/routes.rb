@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :courses
+  resources :courses do
+    resources :reviews, except: [:index, :show]
+  end
   root 'courses#index'
   get '/about' => 'pages#about'
   get '/contact' => 'pages#contact'

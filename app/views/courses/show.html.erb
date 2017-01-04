@@ -1,5 +1,7 @@
 <h1><%=@course.name %> <br></h1>
-
+<div class ="avgRating">
+  Avg Rating: <span class="star-rating" data-score=<%= @avg_rating%></span>(<%=@avg_rating%>)
+  </div>
 <div class="jumbotron">
   <h1>Image Goes Here</h1>
 </div>
@@ -10,7 +12,8 @@
     Course Information
   </div>
 </div>
-<%= @course.description %><br>
+<%= @course.description %>
+<br>
 Course Address:<%= @course.address %><br>
 City:<%= @course.city %><br>
 State:<%= @course.state %><br>
@@ -21,18 +24,29 @@ Hole Count: <%= @course.hole_count %><br>
 
 <div class="">
   <h1>Reviews</h1><br>
-  <ul class="list-group">
-  <li class="list-group-item">
-    <span class="badge">14</span>
-    Cras justo odio
-  </li>
-  <li class="list-group-item">
-    <span class="badge">2</span>
-    Dapibus ac facilisis in
-  </li>
-  <li class="list-group-item">
-    <span class="badge">1</span>
-    Morbi leo risus
-  </li>
-</ul>
-</div>
+  <%= link_to "Write a Review", new_course_review_path(@course), class:"btn btn-primary" %><br>
+  <% if @reviews.blank? %>
+    <p>No reviews yet</p>
+    <%else %>
+    <table class="table table-striped table-hover reviewtable">
+      <thead>
+        <tr>
+          <th class="col-mid-3"></th>
+          <th class="col-mid-9"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%@reviews.each do |review| %>
+        <tr>
+          <td>
+          <h5><%= "#{review.user.email}" %></h5>
+        </td>
+        <td id="reviewtable">
+          <div class="clearfix star-rating" data-score=<%= review.rating %></div>
+          <%=review.comment %>
+        </td>
+        </tr>
+        <%end%>
+      </tbody>
+    </table>
+    <%end%>

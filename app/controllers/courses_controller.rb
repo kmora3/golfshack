@@ -18,7 +18,14 @@
      end
 
      def show
+       @reviewCount = Review.where(course_id: @course).count
        @course = Course.find(params[:id])
+       @reviews = Review.where(course_id: @course)
+       if @reviews.blank?
+         @avg_rating = 0
+       else
+         @avg_rating =  @reviews.average(:rating).round(2)
+       end
      end
 
     private
