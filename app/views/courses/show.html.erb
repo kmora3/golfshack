@@ -3,7 +3,7 @@
   Avg Rating: <span class="star-rating" data-score=<%= @avg_rating%></span>(<%=@avg_rating%>)
   </div>
 <div class="jumbotron">
-  <h1>Image Goes Here</h1>
+  <%= image_tag @course.photo.url(:large) %>
 </div>
 
 <div>

@@ -1,1 +1,20 @@
-<%= link_to "Write a Review",new_course_path, class: "btn btn-primary btn-lg"  %>
+<%= link_to "Add a Course",new_course_path, class: "btn btn-primary btn-lg" %>
+
+<div class="jumbotron">
+  <img class="heroimage"src="http://www.golfsignco.com/images/panoramic-photos/panorama06.jpg">
+</div>
+<%=@courses.each do |c| %>
+<div class="well">
+  <%=link_to c.name, c %><br>
+  <%= c.address %>
+  <%= c.city %>,
+  <%= c.state %>
+  <%= c.zipcode %>
+  <%if c.reviews.present?%>
+    <span class="qty pull-right star-rating" data-score=<%=c.reviews.average(:rating).round(2) %>
+      ></span>
+    <%else%>
+    <span class="qty pull-right">No Reviews Yet</span>
+  <%end%>
+</div>
+<%end%>
